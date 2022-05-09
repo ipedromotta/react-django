@@ -26,13 +26,13 @@ const App = () => {
   const handleTaskAddition = (taskTitle) =>{
     const newTasks = [... tasks, {
       title: taskTitle,
-      description: 'lorem',
+      description: 'Lorem',
       completed: false,
     }]
 
     axios.post('http://127.0.0.1:8000/tasks/', {
       title: taskTitle,
-      description: 'lorem',
+      description: 'Lorem',
       completed: false,
     })
 
@@ -49,27 +49,25 @@ const App = () => {
     fetchTasks()
   }, [])
 
-  const handleTaskClick = (taskId) => {
+  const handleTaskClick  = (taskId) => {
     const newTasks = tasks.map(task => {
       if(task.id === taskId){
-        axios.put(`http://127.0.0.1:8000/tasks/${taskId}`, {
-          task,
-          completed: !task.completed
-        })
+        axios.put(`http://127.0.0.1:8000/tasks/${task.id}/`, {title: task.title,
+        description: task.description,
+        completed: !task.completed })
+
         return {... task, completed: !task.completed}
       }
-
       return task
     })
     
-
     setTasks(newTasks)
   }
 
   const handleTaskDeletion = (taskId) => {
     const newTasks = tasks.filter( task => task.id !== taskId)
 
-    axios.delete(`http://127.0.0.1:8000/tasks/${taskId}`)
+    axios.delete(`http://127.0.0.1:8000/tasks/${taskId}/`)
 
     setTasks(newTasks)
   }

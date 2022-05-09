@@ -12,8 +12,12 @@ const AddTask = ({ handleTaskAddition }) => {
     }
 
     const handleAddTaskClick = () => {
-        handleTaskAddition(inputData)
-        setInputData('')
+        if (inputData.length > 2) {
+            handleTaskAddition(inputData)
+            setInputData('')
+        }else{
+            alert('Digite ao menos 3 caracteres antes de adicionar.')
+        }
     }
 
     return (
