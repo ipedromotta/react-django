@@ -1,5 +1,5 @@
 <h1 align="center">
- <img src="https://github.com/ipedromotta/Python/blob/main/logo.png" width="50"> <img src="https://github.com/ipedromotta/netflix-clone/blob/master/public/logo512.png" width="55"><br>Aplicação FullStack To Do List
+ <img src="https://github.com/ipedromotta/VueJS-Flask/blob/main/frontend/src/assets/logo-python.png" width="50"> <img src="https://github.com/ipedromotta/netflix-clone/blob/master/public/logo512.png" width="55"><br>Aplicação FullStack To Do List
 </h1>
 
 ## :page_facing_up: Sobre #
